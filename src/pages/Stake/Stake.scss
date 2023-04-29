@@ -1,0 +1,235 @@
+.stake_route {
+  &-container {
+    padding: 5rem 0;
+
+    &_header {
+      text-align: center;
+      margin-bottom: 3.2rem;
+    }
+
+    .stake_stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3.2rem;
+      margin-bottom: 3.2rem;
+
+      @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+      }
+
+      > div {
+        background-color: var(--section-background);
+        padding: 3rem;
+        display: grid;
+        place-content: center;
+        text-align: center;
+        border-radius: 10px;
+      }
+    }
+
+    .staking-card_wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+}
+
+.staking-card {
+  border: 1px solid var(--section-background);
+  border-radius: 10px;
+  overflow: hidden;
+
+  &_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 16px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: var(--section-background);
+    cursor: pointer;
+    flex-wrap: wrap;
+
+    &-block {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  &_content {
+    &-box {
+      background-color: transparent;
+      padding: 2.4rem;
+      overflow-y: auto;
+
+      &_header {
+        padding: 1.6rem 0 3.2rem;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        svg path {
+          stroke: var(--text-primary);
+        }
+      }
+
+      &_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.6rem;
+
+        @media (max-width: 768px) {
+          grid-template-columns: 1fr;
+        }
+
+        fieldset {
+          border-radius: 5px;
+          border: 1px solid var(--section-background);
+
+          legend {
+            color: var(--text-secondary);
+          }
+
+          .fieldset_container {
+            padding: 3.2rem;
+
+            &-card_wrapper {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-wrap: wrap;
+              gap: 1rem;
+              margin-bottom: 3rem;
+
+              .card {
+                max-width: calc(33% - 1rem);
+                width: 100%;
+                min-width: 100px;
+                background-color: var(--section-background);
+                border-radius: 5px;
+                overflow: hidden;
+                text-align: center;
+                padding: 0.5rem;
+                border: 3px solid var(--section-background);
+                cursor: pointer;
+                transition: border-color 200ms linear;
+
+                &.active {
+                  border-color: var(--highlight-text);
+                }
+
+                .lazy-load-image-background {
+                  width: 100%;
+                  aspect-ratio: 1;
+                  border-radius: 5px;
+
+                  img {
+                    width: 100%;
+                    aspect-ratio: 1;
+                    border-radius: 5px;
+                  }
+                }
+
+                .no_image {
+                  width: 100%;
+                  aspect-ratio: 1;
+                  border-radius: 5px;
+                  display: grid;
+                  place-items: center;
+                }
+
+                h2 {
+                  font-size: 3rem;
+                  line-height: 3rem;
+                }
+              }
+            }
+
+            .staked_nft_wrapper {
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 1rem;
+              margin-bottom: 3rem;
+
+              .staked_nft-card {
+                background-color: var(--section-background);
+                padding: 0.5rem;
+                border-radius: 5px;
+                border: 1px solid var(--section-background);
+
+                &.active {
+                  border: 1px solid var(--highlight-text);
+                }
+
+                &.inactive {
+                  opacity: 0.7;
+                  pointer-events: none;
+                  cursor: no-drop;
+                }
+
+                &_wrapper {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  flex-wrap: wrap;
+                  gap: 1rem;
+
+                  .card {
+                    max-width: calc(33% - 1rem);
+                    width: 100%;
+                    min-width: 100px;
+                    background-color: var(--background);
+                    border-radius: 5px;
+                    overflow: hidden;
+                    text-align: center;
+                    padding: 0.5rem;
+                    border: 3px solid var(--background);
+                    cursor: pointer;
+                    transition: border-color 200ms linear;
+
+                    &.active {
+                      border-color: var(--highlight-text);
+                    }
+
+                    .lazy-load-image-background {
+                      width: 100%;
+                      aspect-ratio: 1;
+                      border-radius: 5px;
+
+                      img {
+                        width: 100%;
+                        aspect-ratio: 1;
+                        border-radius: 5px;
+                      }
+                    }
+
+                    .no_image {
+                      width: 100%;
+                      aspect-ratio: 1;
+                      border-radius: 5px;
+                      display: grid;
+                      place-items: center;
+                    }
+
+                    h2 {
+                      font-size: 3rem;
+                      line-height: 3rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

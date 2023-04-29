@@ -1,0 +1,10 @@
+.carousel {
+  .inner-carousel {
+    display: flex;
+    gap: 2.4rem;
+
+    > * {
+      min-width: 270px;
+    }
+  }
+}

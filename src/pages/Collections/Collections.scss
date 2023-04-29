@@ -1,0 +1,124 @@
+.collections {
+  padding: 50px 0;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 3.2rem;
+    font-family: var(--font-regular);
+  }
+
+  .table_container {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--section-border);
+    border-radius: 20px;
+
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: var(--section-background);
+
+      tbody tr {
+        cursor: pointer;
+      }
+
+      td,
+      th {
+        border-top: 1px solid var(--section-border);
+        border-bottom: 1px solid var(--section-border);
+        white-space: nowrap;
+      }
+
+      th {
+        padding: 2.8rem 2rem;
+        text-align: left;
+        font-family: var(--font-regular);
+      }
+
+      td {
+        padding: 1.6rem 2rem;
+
+        &.collection-name {
+          * {
+            font-family: var(--font-regular);
+          }
+
+          img {
+            width: 40px;
+            aspect-ratio: 1;
+            object-fit: cover;
+            margin: 0 10px 0 16px;
+          }
+
+          .no_image {
+            width: 40px;
+            aspect-ratio: 1;
+            margin: 0 10px 0 16px;
+
+            svg {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &_filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 3.2rem;
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+    }
+
+    &-controls {
+      display: flex;
+      align-items: center;
+      border-radius: 100px;
+      border: 1px solid var(--secondary);
+
+      button {
+        all: unset;
+        text-transform: capitalize;
+        font-family: var(--font-regular);
+        cursor: pointer;
+        padding: 0.5rem 1.6rem;
+        font-size: 1.6rem;
+        color: var(--secondary);
+        border-radius: 100px;
+        background-color: transparent;
+        transition: background-color 250ms linear;
+
+        &.active {
+          background-color: var(--secondary);
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .collection_pagination {
+    display: grid;
+    place-items: center;
+    padding: 2rem 0;
+
+    > p {
+      cursor: pointer;
+      transition: color 200ms linear;
+
+      &:hover {
+        color: var(--highlight-text);
+      }
+    }
+  }
+}
