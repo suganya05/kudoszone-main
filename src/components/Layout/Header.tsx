@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { useChain, useMoralis } from "react-moralis";
 import { AnimatePresence, motion } from "framer-motion";
 import { useDarkMode } from "usehooks-ts";
+import { Web3Button } from "@web3modal/react";
 
 import "./Header.scss";
 import logo from "assets/logo/logo.png";
@@ -117,7 +118,8 @@ const Header: React.FC<{
           {getEllipsisTxt(account)}
         </Button>
       ) : (
-        <Button onClick={() => setOpenWallet(true)}>Connect</Button>
+        // <Button onClick={() => setOpenWallet(true)}>Connect</Button>
+        <Web3Button />
       )}
       <div className="hamburger" onClick={() => setSidebar(true)}>
         <Menu />
